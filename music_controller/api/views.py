@@ -8,7 +8,7 @@ from .models import Room
 
 # def main(request):
 #     return HttpResponse("<h1>This is the main page of the app.</h1>")
-
+#class RoomView(generics.CreateAPIView):
 class RoomView(generics.ListAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer

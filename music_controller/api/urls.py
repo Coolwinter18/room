@@ -8,5 +8,5 @@ urlpatterns = [
     # path('home', main),
     # path('', main),
     # path('room/<str:room_id>', RoomView.as_view()),
-    path('home', RoomView.as_view()),
+    path('rooms', RoomView.as_view()),
 ]
