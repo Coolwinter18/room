@@ -1,0 +1,23 @@
+/* Import the context */
+@import '../../path/to/your/context';
+
+/* Define your CSS classes */
+.className {
+    /* Use the context value */
+    property: contextValue;
+}
+
+/* Define more CSS classes */
+.anotherClass {
+    /* Use the context value */
+    property: contextValue;
+}
+
+/* Define more CSS classes */
+.yetAnotherClass {
+    /* Use the context value */
+    property: contextValue;
+}
+
+/* Define more CSS classes */
+/* ... */

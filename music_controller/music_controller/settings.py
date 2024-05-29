@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -49,9 +50,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
 ]
 
 ROOT_URLCONF = 'music_controller.urls'
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3001",
+]
 
 TEMPLATES = [
     {
@@ -70,7 +77,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'music_controller.wsgi.application'
-
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3001",
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
